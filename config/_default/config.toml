@@ -1,5 +1,6 @@
-baseurl = "https://doks.netlify.app/"
-canonifyURLs = false
+canonifyURLs = true
+baseurl = "https://vanpariyar.in/vachnamrut"
+# canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true
 enableEmoji = true
