@@ -12,6 +12,13 @@
   [de.params]
     languageISO = "DE"
 
+[gj]
+  languageName = "Gujarati"
+  contentDir = "content/gj"
+  weight = 15
+  [gj.params]
+    languageISO = "GJ"
+
 [nl]
   languageName = "Nederlands"
   contentDir = "content/nl"
