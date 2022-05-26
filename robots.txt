@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://vanpariyar.in/vachnamrut/sitemap.xml
+Sitemap: https://vanpariyar.in/swaminarayan-books/sitemap.xml
