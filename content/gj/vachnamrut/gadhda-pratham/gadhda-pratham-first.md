@@ -9,7 +9,7 @@ images: []
 menu:
   vachnamrut:
     parent: "gadhda-pratham"
-weight: 630
+weight: 628
 toc: true
 ---
 

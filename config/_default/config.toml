@@ -1,5 +1,5 @@
 canonifyURLs = true
-baseurl = "https://vanpariyar.in/vachnamrut"
+baseurl = "https://vanpariyar.in/swaminarayan-books"
 # canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true

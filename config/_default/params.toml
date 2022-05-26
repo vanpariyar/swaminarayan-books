@@ -1,10 +1,10 @@
 # Meta Data for SEO
 
 ## Homepage
-title = "Vachnamrut"
+title = "Swaminarayan Books"
 titleSeparator = "-"
 titleAddition = "The holy Granth of Swaminarayan Bhagwan"
-description = "Vachnamrut is the book wich contains Speech of Swaminarayan Bhagwan compiled by Nand santo."
+description = "Vachnamrut and Many is the book which contains Speech of Swaminarayan Bhagwan compiled by Nand santo."
 
 ## Documentation
 # docsVersion = "0.3"
@@ -13,7 +13,7 @@ description = "Vachnamrut is the book wich contains Speech of Swaminarayan Bhagw
 images = ["doks.png"]
 ogLocale = "en_US"
 domainTLD = "vanpariyar.in"
-titleHome = "Vachnamrut"
+titleHome = "Swaminarayan Books"
 
 ## Twitter Cards
 twitterSite = "@VanpariyaRonakJ"
@@ -22,7 +22,7 @@ twitterCreator = "@VanpariyaRonakJ"
 ## JSON-LD
 # schemaType = "Person"
 schemaType = "Organization"
-schemaName = "Vachnamrut"
+schemaName = "Swaminarayan Books"
 schemaAuthor = "Swaminarayan Bhagwan"
 schemaAuthorTwitter = "https://twitter.com/VanpariyaRonakJ"
 schemaAuthorLinkedIn = "https://www.linkedin.com/in/ronak-vanpariya/"
@@ -69,7 +69,7 @@ alertText = "Introducing the Doks child theme, several DX + UX updates, and more
 # repoHost [Github | Gitea | GitLab | Bitbucket | BitbucketServer ] is used for building the edit link based on git hoster
 repoHost = "GitHub"
 #repoHost = "Gitea"
-docsRepo = "https://github.com/vanpariyar/vachnamrut"
+docsRepo = "https://github.com/vanpariyar/swaminarayan-books"
 docsRepoBranch = "main"
 docsRepoSubPath = ""
 editPage = true
