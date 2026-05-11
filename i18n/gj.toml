@@ -1,2 +1,14 @@
 [get-started]
-   other = "અભ્યાસ"
+   other = "વાંચવાનું શરૂ કરો"
+
+[read-book]
+   other = "પુસ્તક વાંચો"
+
+[all-books]
+   other = "બધા પુસ્તકો"
+
+[search-placeholder]
+   other = "શોધો..."
+
+[footer-text]
+   other = "પવિત્ર વારસાનું જતન"

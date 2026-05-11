@@ -1,0 +1,31 @@
+{{ define "main" }}
+<div class="row justify-content-center">
+  <div class="col-md-12 col-lg-10 col-xl-8">
+    <article>
+      <h1 class="text-center">{{ .Title }}</h1>
+      <div class="text-center lead mb-5">{{ .Description }}</div>
+      
+      <div class="list-group">
+        {{ $pages := .Pages }}
+        {{ if .Sections }}
+          {{ $pages = .Sections }}
+        {{ end }}
+
+        {{ range $pages.ByWeight }}
+        <a href="{{ .RelPermalink }}" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center py-3 border-start-0 border-end-0 border-top-0">
+          <div>
+            <h2 class="h5 mb-1">{{ .Title }}</h2>
+            {{ if .Description }}<p class="mb-0 text-muted small">{{ .Description }}</p>{{ end }}
+          </div>
+          <span class="text-primary">&rarr;</span>
+        </a>
+        {{ end }}
+      </div>
+
+      <div class="mt-5">
+        {{ .Content }}
+      </div>
+    </article>
+  </div>
+</div>
+{{ end }}

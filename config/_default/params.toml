@@ -3,8 +3,8 @@
 ## Homepage
 title = "Swaminarayan Books"
 titleSeparator = "-"
-titleAddition = "The holy Granth of Swaminarayan Bhagwan"
-description = "Vachnamrut and Many is the book which contains Speech of Swaminarayan Bhagwan compiled by Nand santo."
+titleAddition = "Digital Library of Sacred Scriptures"
+description = "A comprehensive collection of Swaminarayan books, including Vachnamrut, Hari Smruti, and more. Read and search the divine wisdom of Swaminarayan Bhagwan."
 
 ## Documentation
 # docsVersion = "0.3"
@@ -18,6 +18,10 @@ titleHome = "Swaminarayan Books"
 ## Twitter Cards
 twitterSite = "@VanpariyaRonakJ"
 twitterCreator = "@VanpariyaRonakJ"
+
+## Analytics & Ads
+googleAnalytics = "297161724"
+googleAdsense = "ca-pub-5659963957549282"
 
 ## JSON-LD
 # schemaType = "Person"
@@ -36,14 +40,14 @@ schemaImageWidth = 1280
 schemaImageHeight = 640
 schemaTwitter = "https://twitter.com/VanpariyaRonakJ"
 schemaLinkedIn = ""
-schemaGitHub = "https://github.com/vanpariyar/vachnamrut"
+schemaGitHub = "https://github.com/vanpariyar/swaminarayan-books"
 schemaSection = "blog"
 
 ## Sitelinks Search Box
 siteLinksSearchBox = false
 
 ## Chrome Browser
-themeColor = "#fff"
+themeColor = "#f39c12"
 
 # Images
 quality = 85
@@ -54,7 +58,7 @@ lqipWidth = "20x"
 smallLimit = "300"
 
 # Footer
-footer = "Powered by <a class=\"text-muted\" href=\"https://www.netlify.com/\">Netlify</a>, <a class=\"text-muted\" href=\"https://gohugo.io/\">Hugo</a>, and <a class=\"text-muted\" href=\"https://getdoks.org/\">Doks</a>"
+footer = "Preserving Sacred Heritage | Powered by <a class=\"text-muted\" href=\"https://gohugo.io/\">Hugo</a> and <a class=\"text-muted\" href=\"https://getdoks.org/\">Doks</a>"
 
 # Feed
 copyRight = "Copyright (c) since 2020"
@@ -63,7 +67,7 @@ copyRight = "Copyright (c) since 2020"
 alert = false
 alertDismissable = true
 # alertText = "Introducing the Doks child theme, several DX + UX updates, and more! <a class=\"alert-link stretched-link\" href=\"https://getdoks.org/blog/doks-v0.2/\" target=\"_blank\" rel=\"noopener\">Check out Doks v0.2</a>"
-alertText = "Introducing the Doks child theme, several DX + UX updates, and more! <a class=\"alert-link stretched-link\" href=\"https://getdoks.org/blog/doks-v0.2/\">Check out Doks v0.2</a>"
+alertText = "Welcome to the new Swaminarayan Books library! <a class=\"alert-link stretched-link\" href=\"/\">Explore the collection</a>"
 
 # Edit Page
 # repoHost [Github | Gitea | GitLab | Bitbucket | BitbucketServer ] is used for building the edit link based on git hoster
@@ -82,7 +86,7 @@ lastMod = true
   flexSearch = true
   darkMode = true
   bootStrapJs = true
-  breadCrumb = false
+  breadCrumb = true
   highLight = true
   kaTex = false
   multilingualMode = true

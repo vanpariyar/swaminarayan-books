@@ -3,11 +3,12 @@
   functions = "functions"
 
 [build.environment]
-  NODE_VERSION = "17.8.0"
-  NPM_VERSION = "8.5.5"
+  NODE_VERSION = "22.19.0"
+  NPM_VERSION = "10.9.0"
 
 [context.production]
   command = "npm run build"
+...
 
 [context.deploy-preview]
   command = "npm run build -- -b $DEPLOY_PRIME_URL"

@@ -1,0 +1,76 @@
+backend:
+  name: github
+  repo: vanpariyar/swaminarayan-books
+  branch: main
+
+media_folder: "static/images"
+public_folder: "/images"
+
+i18n:
+  structure: multiple_folders
+  locales: [gj, en, nl]
+  default_locale: gj
+
+collections:
+  - name: "books"
+    label: "Books"
+    folder: "content/gj"
+    filter: { field: "type", value: "book" }
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string", required: false }
+      - { label: "Type", name: "type", widget: "hidden", default: "book" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Draft", name: "draft", widget: "boolean", default: false }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
+
+  - name: "vachnamrut_chapters"
+    label: "Vachnamrut Chapters"
+    folder: "content/gj/vachnamrut"
+    extension: "md"
+    format: "frontmatter"
+    create: true
+    nested:
+      depth: 3
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string", required: false }
+      - { label: "Lead", name: "lead", widget: "string", required: false }
+      - { label: "Weight", name: "weight", widget: "number", default: 0 }
+      - { label: "TOC", name: "toc", widget: "boolean", default: true }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Menu"
+        name: "menu"
+        widget: "object"
+        fields:
+          - label: "Vachnamrut"
+            name: "vachnamrut"
+            widget: "object"
+            fields:
+              - { label: "Parent", name: "parent", widget: "string", required: false }
+
+  - name: "hari_smruti_chapters"
+    label: "Hari Smruti Chapters"
+    folder: "content/gj/hari-smruti"
+    extension: "md"
+    format: "frontmatter"
+    create: true
+    nested:
+      depth: 3
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string", required: false }
+      - { label: "Lead", name: "lead", widget: "string", required: false }
+      - { label: "Weight", name: "weight", widget: "number", default: 0 }
+      - { label: "TOC", name: "toc", widget: "boolean", default: true }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Menu"
+        name: "menu"
+        widget: "object"
+        fields:
+          - label: "Hari Smruti"
+            name: "hari-smruti"
+            widget: "object"
+            fields:
+              - { label: "Parent", name: "parent", widget: "string", required: false }

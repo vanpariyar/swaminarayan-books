@@ -6,3 +6,20 @@
   {{ $alertInit := resources.Get "js/alert-init.js" | js.Build | minify -}}
   <script>{{ $alertInit.Content | safeJS }}</script>
 {{- end -}}
+
+{{ if and (hugo.IsProduction | or (eq .Site.Params.env "production")) .Site.Params.googleAnalytics -}}
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-{{ .Site.Params.googleAnalytics }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-{{ .Site.Params.googleAnalytics }}');
+  </script>
+{{ end -}}
+
+{{ if and (hugo.IsProduction | or (eq .Site.Params.env "production")) .Site.Params.googleAdsense -}}
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ .Site.Params.googleAdsense }}"
+     crossorigin="anonymous"></script>
+{{- end -}}

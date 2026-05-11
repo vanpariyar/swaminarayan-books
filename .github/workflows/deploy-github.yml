@@ -1,33 +1,45 @@
-# Deploy your Hyas site to GitHub Pages
+# Name: Deploy Hyas Site to GitHub Pages
+name: Deploy Hyas Site to GitHub Pages
 
-name: GitHub Pages
-
+# Trigger this workflow only when code is pushed to the 'main' branch
 on:
   push:
     branches:
       - main
 
 jobs:
-  deploy:
-    runs-on: ubuntu-20.04
+  build_and_deploy:
+    runs-on: ubuntu-latest # Use 'ubuntu-latest' for always the most current runner OS
+
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '16'
-          cache: 'npm'
+    # 1. Checkout the repository code (Use v4)
+    - name: Checkout Repository
+      uses: actions/checkout@v4
 
-      - name: Install dependencies
-        run: npm install
+    # 2. Set up Node.js environment (Use v4 and recommend an LTS version)
+    - name: Setup Node.js Environment
+      uses: actions/setup-node@v4
+      with:
+        node-version: 'lts/*' # Use the latest Long Term Support release
 
-      - name: Check for linting errors
-        run: npm test
+    # 3. Install dependencies
+    - name: Install Dependencies (npm install)
+      run: npm install
 
-      - name: Build production website
-        run: npm run build
+    # 4. Run tests (Optional but recommended for CI/CD)
+    # NOTE: If your tests fail, this step will fail and prevent deployment.
+    - name: Run Unit Tests (npm test)
+      # Use '|| true' if you want the build to continue even if tests fail
+      run: npm test
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+    # 5. Build the production website
+    - name: Build Production Website (npm run build)
+      run: npm run build
+
+    # 6. Deploy the built static files to GitHub Pages
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3 # Keeping this reliable action
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./public # Ensure this matches the directory created by 'npm run build'
+
